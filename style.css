@@ -31,6 +31,23 @@ body {
   background-size: cover;
 }
 
+.site-brand {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  z-index: 10;
+}
+.site-brand img {
+  height: 40px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
 .container {
   width: min(100%, 1080px);
   padding: 32px 20px 48px;
@@ -69,7 +86,7 @@ header p {
   -webkit-backdrop-filter: blur(8px);
 }
 .unit .card {
-  background: var(--card); 
+  background: var(--card);
   border-radius: 14px;
   text-align: center;
   padding: 18px 10px;
@@ -95,4 +112,58 @@ footer {
   color: #f8f8f8;
   opacity: 0.85;
   font-size: 13px;
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+  .container {
+    padding: 28px 18px 40px;
+  }
+  .timer {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 24px 16px 36px;
+  }
+  .timer {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+    width: min(100%, 640px);
+    gap: 12px;
+  }
+  .unit .card {
+    padding: 16px 10px;
+  }
+  header p {
+    padding: 0 8px;
+  }
+  .site-brand img {
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 12px 28px;
+  }
+  .timer {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .value {
+    font-size: clamp(28px, 12vw, 44px);
+  }
+  .label {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+  .site-brand {
+    top: 12px;
+    left: 12px;
+  }
+  .site-brand img {
+    height: 28px;
+  }
 }
