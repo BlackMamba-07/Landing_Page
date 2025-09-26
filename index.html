@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nous arrivons bientôt. Inscrivez-vous pour être averti du lancement."
+    />
+    <title>Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="images/DIGICORP.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container" role="main">
+      <header>
+        <div
+          aria-hidden="true"
+          style="font-weight: 800; letter-spacing: 6px; opacity: 0.95"
+        ></div>
+        <h1>Nous arrivons bientôt</h1>
+        <p>Une nouvelle expérience arrive. Le site ouvrira dans :</p>
+      </header>
+
+      <section class="timer" aria-live="polite" aria-label="Compte à rebours">
+        <div class="unit">
+          <div class="card">
+            <div id="days" class="value">00</div>
+            <div class="label">Jours</div>
+          </div>
+        </div>
+        <div class="unit">
+          <div class="card">
+            <div id="hours" class="value">00</div>
+            <div class="label">Heures</div>
+          </div>
+        </div>
+        <div class="unit">
+          <div class="card">
+            <div id="minutes" class="value">00</div>
+            <div class="label">Minutes</div>
+          </div>
+        </div>
+        <div class="unit">
+          <div class="card">
+            <div id="seconds" class="value">00</div>
+            <div class="label">Secondes</div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>© <span id="year"></span> DIGICORP. Tous droits réservés.</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
