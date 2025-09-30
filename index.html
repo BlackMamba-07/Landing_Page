@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Nous arrivons bientôt. Inscrivez-vous pour être averti du lancement."
+      content="Baltinova Trading - Expertise, performance et innovation sur les marchés."
     />
-    <title>Baltinovatrading</title>
+    <meta property="og:title" content="Baltinova Trading" />
+    <meta
+      property="og:description"
+      content="Expertise, performance et innovation sur les marchés."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/Baltinova Trading.jpg" />
+    <link rel="icon" href="images/Baltinova Trading.jpg" />
+    <title>Baltinova Trading</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- <link rel="shortcut icon" href="images/DIGICORP.png" type="image/x-icon" /> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
       rel="stylesheet"
@@ -18,47 +25,462 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- <a class="site-brand" href="#" aria-label="Accueil">
-      <img src="images/DIGICORP.png" alt="Logo" />
-    </a> -->
-    <main class="container" role="main">
-      <header>
-        <div
-          aria-hidden="true"
-          style="font-weight: 800; letter-spacing: 6px; opacity: 0.95"
-        ></div>
-        <h1>Nous arrivons bientôt</h1>
-        <p>Une nouvelle expérience arrive. Le site ouvrira dans :</p>
-      </header>
+    <header class="site-header" data-sticky>
+      <div class="nav-container">
+        <a href="#hero" class="brand" aria-label="Baltinova Trading">
+          <img
+            src="images/Baltinova Trading.jpg"
+            alt="Baltinova Trading"
+            loading="eager"
+          />
+          <span>Baltinova Trading</span>
+        </a>
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <span class="sr-only">Menu</span>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M3 6h18M3 12h18M3 18h18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
+          <a href="#hero" class="nav-link active">Accueil</a>
+          <a href="#about" class="nav-link">À propos</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#stats" class="nav-link">Chiffres</a>
+          <a href="#testimonials" class="nav-link">Témoignages</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+          <a href="#contact" class="nav-link btn-primary">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-      <section class="timer" aria-live="polite" aria-label="Compte à rebours">
-        <div class="unit">
-          <div class="card">
-            <div id="days" class="value">00</div>
-            <div class="label">Jours</div>
+    <main id="main" class="main">
+      <section
+        id="hero"
+        class="section hero fullscreen"
+        aria-label="Héros"
+        data-parallax
+      >
+        <div class="container">
+          <div class="hero-content" data-reveal>
+            <h1>Industrial Resource & Oil Exploration.</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            </p>
+            <div class="hero-cta">
+              <a href="#services" class="btn-primary">Discover More</a>
+              <a href="#contact" class="btn-outline">Contact Us</a>
+            </div>
           </div>
         </div>
-        <div class="unit">
-          <div class="card">
-            <div id="hours" class="value">00</div>
-            <div class="label">Heures</div>
-          </div>
-        </div>
-        <div class="unit">
-          <div class="card">
-            <div id="minutes" class="value">00</div>
-            <div class="label">Minutes</div>
-          </div>
-        </div>
-        <div class="unit">
-          <div class="card">
-            <div id="seconds" class="value">00</div>
-            <div class="label">Secondes</div>
+        <div class="hero-bg" aria-hidden="true"></div>
+      </section>
+
+      <section
+        id="highlights"
+        class="section highlights"
+        aria-label="Key highlights"
+      >
+        <div class="container">
+          <div class="hl-cards">
+            <article class="hl-card" data-reveal>
+              <div class="hl-badge" aria-hidden="true">🏗️</div>
+              <h3>Integrating Sustainability.</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus nec ullamcorper mattis.
+              </p>
+            </article>
+            <article class="hl-card" data-reveal>
+              <div class="hl-badge" aria-hidden="true">🛠️</div>
+              <h3>CCUS Technology.</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus nec ullamcorper mattis.
+              </p>
+            </article>
+            <article class="hl-card" data-reveal>
+              <div class="hl-badge" aria-hidden="true">👷</div>
+              <h3>Careers at Boile.</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus nec ullamcorper mattis.
+              </p>
+            </article>
           </div>
         </div>
       </section>
+
+      <section id="about" class="section about" aria-label="À propos">
+        <div class="container grid two">
+          <figure class="about-figure" data-reveal>
+            <img src="images/pexels.jpg" alt="Chantier industriel" />
+            <div class="about-sticker" role="note" aria-label="Points clés">
+              <ul>
+                <li>Gestion de projet structurée</li>
+                <li>Qualité et sécurité certifiées</li>
+                <li>Délais et budgets maîtrisés</li>
+                <li>Respect de l'environnement</li>
+              </ul>
+            </div>
+          </figure>
+          <div class="about-copy" data-reveal>
+            <p class="eyebrow">About Us</p>
+            <h2>Innovative Solution for Complex Energy.</h2>
+            <p class="tagline">
+              Our Approach to Problem Solving in The Oil & Industrial
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+              blandit varius tortor in volutpat. In mattis tempor diam. Fusce
+              interdum eu nisl euismod maximus. Aliquam dignissim odio justo.
+            </p>
+            <p>
+              Fusce tellus leo, elementum in tortor id, volutpat pellentesque
+              ipsum. Curabitur laoreet, massa at tristique interdum, urna lacus
+              consequat eros.
+            </p>
+            <div class="about-actions">
+              <a href="#services" class="btn-primary">Read More</a>
+              <button class="play-btn" aria-label="Play video">
+                <span>▶</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="services"
+        class="section services fullscreen"
+        aria-label="Services"
+      >
+        <div class="container">
+          <h2 data-reveal>
+            High Performance Services For Multiple Industries And Technologies
+          </h2>
+          <div class="cards three" data-reveal>
+            <article class="card card-rich">
+              <h3>Integrating Sustainability.</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus nec ullamcorper mattis.
+              </p>
+              <ul class="bullets">
+                <li>Clean operations</li>
+                <li>Reduced emissions</li>
+                <li>Community impact</li>
+              </ul>
+              <a href="#contact" class="btn-outline">Read More</a>
+            </article>
+            <article class="card card-rich">
+              <h3>CCUS Technology.</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus nec ullamcorper mattis.
+              </p>
+              <ul class="bullets">
+                <li>Capture</li>
+                <li>Utilization</li>
+                <li>Storage</li>
+              </ul>
+              <a href="#contact" class="btn-outline">Read More</a>
+            </article>
+            <article class="card card-rich">
+              <h3>Careers at Boile.</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+                tellus, luctus nec ullamcorper mattis.
+              </p>
+              <ul class="bullets">
+                <li>Open positions</li>
+                <li>Great culture</li>
+                <li>Benefits</li>
+              </ul>
+              <a href="#contact" class="btn-outline">Read More</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="stats"
+        class="section stats fullscreen"
+        aria-label="Chiffres clés"
+      >
+        <div class="container">
+          <div class="kpis" data-reveal>
+            <div class="kpi">
+              <span class="num" data-count="98">0</span>%
+              <span class="label">Satisfaction</span>
+            </div>
+            <div class="kpi">
+              <span class="num" data-count="24">0</span>/<span class="suffix"
+                >7</span
+              >
+              <span class="label">Support</span>
+            </div>
+            <div class="kpi">
+              <span class="num" data-count="12">0</span>
+              <span class="label">Stratégies actives</span>
+            </div>
+            <div class="kpi">
+              <span class="num" data-count="30">0</span>
+              <span class="label">Partenaires</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section brands" aria-label="Partenaires">
+        <div class="container">
+          <div class="brand-logos" data-reveal>
+            <span>CAPITAL</span>
+            <span>FINANCE</span>
+            <span>INVEST</span>
+            <span>ACCREON</span>
+            <span>ALPHA</span>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="testimonials"
+        class="section testimonials fullscreen"
+        aria-label="Témoignages"
+      >
+        <div class="container">
+          <h2 data-reveal>Serving Impressive List of Long Term Clients</h2>
+          <div class="testi-cards" data-reveal>
+            <article class="testi-card">
+              <img class="testi-photo" src="images/pexels.jpg" alt="Client" />
+              <p class="quote">
+                « Une méthodologie claire et des résultats réguliers. »
+              </p>
+              <div class="author">
+                <div class="avatar">AM</div>
+                <div class="meta">
+                  <strong>A. Martin</strong>
+                  <span>Directeur financier</span>
+                </div>
+              </div>
+            </article>
+            <article class="testi-card">
+              <img class="testi-photo" src="images/pexels.jpg" alt="Client" />
+              <p class="quote">
+                « Un accompagnement précis et transparent, très professionnel. »
+              </p>
+              <div class="author">
+                <div class="avatar">LD</div>
+                <div class="meta">
+                  <strong>L. Dupont</strong>
+                  <span>Investisseur privé</span>
+                </div>
+              </div>
+            </article>
+            <article class="testi-card">
+              <img class="testi-photo" src="images/pexels.jpg" alt="Client" />
+              <p class="quote">
+                « Des tableaux de bord utiles et un vrai pilotage du risque. »
+              </p>
+              <div class="author">
+                <div class="avatar">SB</div>
+                <div class="meta">
+                  <strong>S. Bernard</strong>
+                  <span>Family office</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-band" aria-label="Appel à l'action">
+        <div class="container grid two" data-reveal>
+          <div>
+            <h2>Prêt à passer à l'étape suivante ?</h2>
+            <p>
+              Explorons ensemble comment améliorer vos performances tout en
+              maîtrisant le risque.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a href="#contact" class="btn-primary">Demander un devis</a>
+            <a href="#services" class="btn-outline">Voir nos offres</a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="faq"
+        class="section faq fullscreen"
+        aria-label="Questions fréquentes"
+      >
+        <div class="container">
+          <h2 data-reveal>FAQ</h2>
+          <details class="faq-item" data-reveal>
+            <summary>Comment démarrez-vous une collaboration ?</summary>
+            <p>
+              Un diagnostic de vos besoins suivi d'une proposition structurée.
+            </p>
+          </details>
+          <details class="faq-item" data-reveal>
+            <summary>Quelles sont vos métriques de risque ?</summary>
+            <p>Volatilité, drawdown, VaR, corrélations et stress tests.</p>
+          </details>
+          <details class="faq-item" data-reveal>
+            <summary>Proposez-vous des formations ?</summary>
+            <p>Oui, des modules adaptés aux niveaux et objectifs.</p>
+          </details>
+        </div>
+      </section>
+
+      <section
+        id="news"
+        class="section news fullscreen"
+        aria-label="Actualités"
+      >
+        <div class="container">
+          <h2 data-reveal>Actualités et perspectives</h2>
+          <div class="posts" data-reveal>
+            <article class="post">
+              <div class="badge">Analyse</div>
+              <h3>Rotation sectorielle et momentum</h3>
+              <p>
+                Comment capter les tendances tout en limitant les faux signaux.
+              </p>
+              <a href="#contact" class="btn-outline">En savoir plus</a>
+            </article>
+            <article class="post">
+              <div class="badge">Recherche</div>
+              <h3>Corrélation et diversification</h3>
+              <p>
+                Construire des portefeuilles résilients face aux chocs de
+                marché.
+              </p>
+              <a href="#contact" class="btn-outline">Lire l'étude</a>
+            </article>
+            <article class="post">
+              <div class="badge">Produit</div>
+              <h3>Nouvelle stratégie multi-actifs</h3>
+              <p>Un cadre systématique mêlant qualité, tendance et carry.</p>
+              <a href="#contact" class="btn-outline">Découvrir</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="why" class="section why" aria-label="Why Choose Us">
+        <div class="container grid two">
+          <div class="values-col" data-reveal>
+            <div class="values-grid">
+              <article class="value-card">
+                <span class="value-badge">01</span>
+                <h4>Collaborative.</h4>
+                <p>
+                  Nous co-construisons vos projets avec des équipes alignées
+                  terrain.
+                </p>
+              </article>
+              <article class="value-card">
+                <span class="value-badge">02</span>
+                <h4>Efficient.</h4>
+                <p>
+                  Optimisation des coûts, délais maîtrisés, qualité mesurée.
+                </p>
+              </article>
+              <article class="value-card">
+                <span class="value-badge">03</span>
+                <h4>Progressive.</h4>
+                <p>Procédés modernes et solutions durables pour le BTP.</p>
+              </article>
+              <article class="value-card">
+                <span class="value-badge">04</span>
+                <h4>Respectful.</h4>
+                <p>Sécurité, environnement et voisinage au cœur du chantier.</p>
+              </article>
+            </div>
+          </div>
+          <div class="why-col" data-reveal>
+            <p class="eyebrow">Why Choose Us</p>
+            <h2>Our Core Values for Industry Leadership.</h2>
+            <p>
+              De l’étude à la livraison, nous pilotons vos travaux avec rigueur
+              et transparence. Une équipe d’experts, des matériaux certifiés et
+              un suivi de qualité pour un résultat durable.
+            </p>
+            <div class="why-meta">
+              <div class="experience-circle">
+                <span>15+</span>
+                <small>Years Experience</small>
+              </div>
+              <img
+                class="why-image"
+                src="images/pexels.jpg"
+                alt="Chantier BTP"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        class="section contact fullscreen"
+        aria-label="Contact"
+      >
+        <div class="container grid two">
+          <div data-reveal>
+            <h2>Contactez-nous</h2>
+            <p>Parlez-nous de vos objectifs. Réponse sous 24h ouvrées.</p>
+            <ul class="contact-list">
+              <li><strong>Email:</strong> contact@baltinova.com</li>
+              <li><strong>Téléphone:</strong> +225 01 02 03 04</li>
+            </ul>
+          </div>
+          <form class="contact-form" data-reveal>
+            <label>
+              <span>Nom</span>
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button type="submit" class="btn-primary">Envoyer</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
     </main>
-    <footer>© <span id="year"></span> DIGICORP. Tous droits réservés.</footer>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          © <span id="year"></span> Baltinova Trading. Tous droits réservés.
+        </p>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
