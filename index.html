@@ -26,6 +26,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+    <!-- Swiper CSS -->
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -80,49 +85,71 @@
 
     <main id="main" class="main">
       <section
-        id="hero"
-        class="section hero fullscreen"
-        aria-label="Héros"
-        data-parallax
+  id="hero"
+  class="section hero fullscreen"
+  aria-label="Héros"
+  data-parallax
+>
+  <div class="hero-slider swiper">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div
+        class="swiper-slide hero-slide"
+        style="--bg: url('images/Cons/Cons4.jpg')"
       >
-        <div class="container">
-          <div class="hero-content" data-reveal>
-            <h1>Construire, Rénover, Créer.</h1>
-            <p>
-              Des solutions BTP sur-mesure, avec transparence, diligence et
-              créativité.
-            </p>
-            <div class="hero-cta">
-              <a href="#services" class="btn-primary">Nos Services</a>
-              <a href="#contact" class="btn-outline">Contacts</a>
-            </div>
+        <div class="overlay"></div>
+        <div class="slide-content">
+          <h1>Construire l'avenir</h1>
+          <p>Votre partenaire pour des projets solides et durables.</p>
+          <div class="hero-cta">
+            <a href="#services" class="btn-primary">Nos Services</a>
+            <a href="#contact" class="btn-outline">Contacts</a>
           </div>
         </div>
-        <div class="hero-slider" aria-hidden="true">
-          <div
-            class="hero-slide is-active"
-            style="--bg: url('images/Cons/Cons4.jpg')"
-          ></div>
-          <div
-            class="hero-slide"
-            style="--bg: url('images/Cons/Cons3.jpg')"
-          ></div>
-          <div
-            class="hero-slide"
-            style="--bg: url('images/Deco/Deco1.jpg')"
-          ></div>
-          <div class="hero-controls" aria-label="Contrôles du slider">
-            <button class="hero-control prev" aria-label="Précédent">
-              <span class="sr-only">Précédent</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <button class="hero-control next" aria-label="Suivant">
-              <span class="sr-only">Suivant</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
+      </div>
+
+      <!-- Slide 2 -->
+      <div
+        class="swiper-slide hero-slide"
+        style="--bg: url('images/Cons/Cons3.jpg')"
+      >
+        <div class="overlay"></div>
+        <div class="slide-content">
+          <h1>Rénover avec style</h1>
+          <p>Des solutions adaptées à vos besoins et votre budget.</p>
+          <div class="hero-cta">
+            <a href="#services" class="btn-primary">Nos Services</a>
+            <a href="#contact" class="btn-outline">Contacts</a>
           </div>
         </div>
-      </section>
+      </div>
+
+      <!-- Slide 3 -->
+      <div
+        class="swiper-slide hero-slide"
+        style="--bg: url('images/Deco/Deco1.jpg')"
+      >
+        <div class="overlay"></div>
+        <div class="slide-content">
+          <h1>Créer avec passion</h1>
+          <p>Un design moderne et une finition impeccable.</p>
+          <div class="hero-cta">
+            <a href="#services" class="btn-primary">Nos Services</a>
+            <a href="#contact" class="btn-outline">Contacts</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- Navigation -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
 
       <section id="banner" class="section banner" aria-label="Bannière">
         <div class="container">
@@ -619,7 +646,8 @@
         </p>
       </div>
     </footer>
-
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

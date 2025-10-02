@@ -195,21 +195,20 @@
   // Formulaire supprimé au profit de la carte (aucune action ici)
 })();
 
-// Initialisation du Swiper pour les témoignages
-const swiper = new Swiper(".testi-swiper", {
-  // Les options que vous aviez déjà
-  effect: "flip",
-  grabCursor: true,
+/// HERO - Swiper
+const heroSwiper = new Swiper(".hero-swiper", {
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  effect: "fade", // ou "slide"
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
-  },
-  // Options supplémentaires recommandées pour des témoignages
-  loop: true, // Pour un défilement infini
-  autoplay: {
-    delay: 5000, // Défilement automatique toutes les 5 secondes
   },
 });
