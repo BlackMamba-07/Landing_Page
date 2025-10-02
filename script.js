@@ -65,8 +65,25 @@
 
   // Parallax hero
   const hero = document.querySelector("[data-parallax]");
-  const heroBg = document.querySelector(".hero-bg");
-  if (hero && heroBg) {
+  const slides = document.querySelectorAll(".hero-slide");
+  const prevBtn = null;
+  const nextBtn = null;
+  let slideIndex = 0;
+  let sliderTimer;
+  const goTo = (i) => {
+    slides.forEach((s, idx) => s.classList.toggle("is-active", idx === i));
+    slideIndex = i;
+  };
+  const next = () => goTo((slideIndex + 1) % Math.max(slides.length, 1));
+  const prev = () =>
+    goTo((slideIndex - 1 + slides.length) % Math.max(slides.length, 1));
+  if (hero && slides.length) {
+    goTo(0);
+    sliderTimer = setInterval(next, 4000);
+    function resetTimer() {
+      clearInterval(sliderTimer);
+      sliderTimer = setInterval(next, 4000);
+    }
     window.addEventListener(
       "scroll",
       () => {
@@ -75,10 +92,46 @@
           Math.max((0 - rect.top) / Math.max(1, rect.height), 0),
           1
         );
-        heroBg.style.transform = `translateY(${progress * 40}px) scale(1.02)`;
+        const active = document.querySelector(".hero-slide.is-active");
+        if (active)
+          active.style.transform = `translateY(${progress * 40}px) scale(1.02)`;
       },
       { passive: true }
     );
+  }
+  // Témoignages - slider 3 par écran
+  const testiTrack = document.querySelector(".testi-track");
+  const testiPrev = null;
+  const testiNext = null;
+  const testiCards = document.querySelectorAll(".testi-card");
+  if (testiTrack && testiCards.length) {
+    let tIndex = 0;
+    const perView = () =>
+      window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+    const maxIndex = () =>
+      Math.max(0, Math.ceil(testiCards.length / perView()) - 1);
+    const sync = () => {
+      const pct = -(tIndex * 100);
+      testiTrack.style.transform = `translateX(${pct}%)`;
+    };
+    const go = (i) => {
+      tIndex = Math.max(0, Math.min(maxIndex(), i));
+      sync();
+    };
+    const nextT = () => go(tIndex + 1);
+    const prevT = () => go(tIndex - 1);
+    let testiTimer = setInterval(nextT, 4000);
+    const viewport = document.querySelector(".testi-viewport");
+    if (viewport) {
+      viewport.addEventListener("mouseenter", () => {
+        clearInterval(testiTimer);
+      });
+      viewport.addEventListener("mouseleave", () => {
+        testiTimer = setInterval(nextT, 4000);
+      });
+    }
+    window.addEventListener("resize", () => go(tIndex));
+    sync();
   }
 
   // KPI counters
@@ -108,16 +161,26 @@
   );
   document.querySelectorAll(".kpis").forEach((k) => kpiObserver.observe(k));
 
-  // Contact form (demo-only)
-  const form = document.querySelector(".contact-form");
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const status = form.querySelector(".form-status");
-      if (status) {
-        status.textContent = "Merci, votre message a été envoyé !";
-      }
-      form.reset();
-    });
+  // Réalisations - filtres
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const works = document.querySelectorAll(".work");
+  if (filterBtns.length && works.length) {
+    const applyFilter = (cat) => {
+      works.forEach((w) => {
+        const ok = cat === "all" || w.getAttribute("data-category") === cat;
+        w.style.display = ok ? "" : "none";
+      });
+    };
+    filterBtns.forEach((btn) =>
+      btn.addEventListener("click", () => {
+        filterBtns.forEach((b) => b.classList.remove("is-active"));
+        btn.classList.add("is-active");
+        applyFilter(btn.getAttribute("data-filter"));
+      })
+    );
+    applyFilter("all");
   }
+
+  // Contact form (demo-only)
+  // Formulaire supprimé au profit de la carte (aucune action ici)
 })();

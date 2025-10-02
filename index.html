@@ -14,13 +14,23 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="images/Baltinova Trading.jpg" />
-    <link rel="icon" href="images/Baltinova Trading.jpg" />
+    <link rel="icon" href="baltinova logo png/baltinova logo 1 .png" />
     <title>Baltinova Trading</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -29,8 +39,8 @@
       <div class="nav-container">
         <a href="#hero" class="brand" aria-label="Baltinova Trading">
           <img
-            src="images/Baltinova Trading.jpg"
-            alt="Baltinova Trading"
+            src="baltinova logo png/baltinova logo rouge.png"
+            alt="Baltinova"
             loading="eager"
           />
           <span>Baltinova Trading</span>
@@ -60,10 +70,10 @@
           <a href="#hero" class="nav-link active">Accueil</a>
           <a href="#about" class="nav-link">À propos</a>
           <a href="#services" class="nav-link">Services</a>
-          <a href="#stats" class="nav-link">Chiffres</a>
+          <a href="#realisations" class="nav-link">Réalisations</a>
           <a href="#testimonials" class="nav-link">Témoignages</a>
           <a href="#faq" class="nav-link">FAQ</a>
-          <a href="#contact" class="nav-link btn-primary">Contact</a>
+          <a href="#contact" class="nav-link btn-primary">Contacts</a>
         </nav>
       </div>
     </header>
@@ -77,50 +87,50 @@
       >
         <div class="container">
           <div class="hero-content" data-reveal>
-            <h1>Industrial Resource & Oil Exploration.</h1>
+            <h1>Construire, Rénover, Créer.</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              Des solutions BTP sur-mesure, avec transparence, diligence et
+              créativité.
             </p>
             <div class="hero-cta">
-              <a href="#services" class="btn-primary">Discover More</a>
-              <a href="#contact" class="btn-outline">Contact Us</a>
+              <a href="#services" class="btn-primary">Nos Services</a>
+              <a href="#contact" class="btn-outline">Contacts</a>
             </div>
           </div>
         </div>
-        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-slider" aria-hidden="true">
+          <div
+            class="hero-slide is-active"
+            style="--bg: url('images/Cons/Cons4.jpg')"
+          ></div>
+          <div
+            class="hero-slide"
+            style="--bg: url('images/Cons/Cons3.jpg')"
+          ></div>
+          <div
+            class="hero-slide"
+            style="--bg: url('images/Deco/Deco1.jpg')"
+          ></div>
+        </div>
       </section>
 
-      <section
-        id="highlights"
-        class="section highlights"
-        aria-label="Key highlights"
-      >
+      <section id="banner" class="section banner" aria-label="Bannière">
         <div class="container">
-          <div class="hl-cards">
-            <article class="hl-card" data-reveal>
-              <div class="hl-badge" aria-hidden="true">🏗️</div>
-              <h3>Integrating Sustainability.</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis.
-              </p>
+          <div class="bn-cards">
+            <article class="bn-card" data-reveal>
+              <div class="bn-badge" aria-hidden="true">01</div>
+              <h3>Transparence</h3>
+              <p>Suivi clair, devis détaillés et communication continue.</p>
             </article>
-            <article class="hl-card" data-reveal>
-              <div class="hl-badge" aria-hidden="true">🛠️</div>
-              <h3>CCUS Technology.</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis.
-              </p>
+            <article class="bn-card" data-reveal>
+              <div class="bn-badge" aria-hidden="true">02</div>
+              <h3>Diligence</h3>
+              <p>Respect des délais, normes et engagements qualité.</p>
             </article>
-            <article class="hl-card" data-reveal>
-              <div class="hl-badge" aria-hidden="true">👷</div>
-              <h3>Careers at Boile.</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis.
-              </p>
+            <article class="bn-card" data-reveal>
+              <div class="bn-badge" aria-hidden="true">03</div>
+              <h3>Créativité</h3>
+              <p>Design et solutions techniques au service de vos idées.</p>
             </article>
           </div>
         </div>
@@ -129,37 +139,42 @@
       <section id="about" class="section about" aria-label="À propos">
         <div class="container grid two">
           <figure class="about-figure" data-reveal>
-            <img src="images/pexels.jpg" alt="Chantier industriel" />
-            <div class="about-sticker" role="note" aria-label="Points clés">
+            <img
+              src="baltinova logo png/baltinova logo alternatif.png"
+              alt="Baltinova Trading"
+            />
+            <!-- <div class="about-sticker" role="note" aria-label="Points clés">
               <ul>
                 <li>Gestion de projet structurée</li>
                 <li>Qualité et sécurité certifiées</li>
                 <li>Délais et budgets maîtrisés</li>
                 <li>Respect de l'environnement</li>
               </ul>
-            </div>
+            </div> -->
           </figure>
           <div class="about-copy" data-reveal>
-            <p class="eyebrow">About Us</p>
-            <h2>Innovative Solution for Complex Energy.</h2>
+            
+            <h2 class="section-title">À propos</h2>
             <p class="tagline">
-              Our Approach to Problem Solving in The Oil & Industrial
+              Transparence, diligence et créativité au service de vos projets.
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-              blandit varius tortor in volutpat. In mattis tempor diam. Fusce
-              interdum eu nisl euismod maximus. Aliquam dignissim odio justo.
+              Chez Baltinova Trading, nous concevons et réalisons des espaces
+              durables et esthétiques. De la construction neuve à la rénovation,
+              nos équipes pilotent chaque étape avec un suivi clair, des
+              matériaux certifiés et des délais maîtrisés.
             </p>
             <p>
-              Fusce tellus leo, elementum in tortor id, volutpat pellentesque
-              ipsum. Curabitur laoreet, massa at tristique interdum, urna lacus
-              consequat eros.
+              Notre exigence: des chantiers bien coordonnés, une communication
+              continue et des finitions impeccables. Confiez-nous vos idées,
+              nous leur donnons vie avec une approche structurée et des
+              solutions sur-mesure.
             </p>
             <div class="about-actions">
-              <a href="#services" class="btn-primary">Read More</a>
-              <button class="play-btn" aria-label="Play video">
+              <a href="#services" class="btn-primary">Lire plus</a>
+              <!-- <button class="play-btn" aria-label="Play video">
                 <span>▶</span>
-              </button>
+              </button> -->
             </div>
           </div>
         </div>
@@ -171,90 +186,142 @@
         aria-label="Services"
       >
         <div class="container">
-          <h2 data-reveal>
-            High Performance Services For Multiple Industries And Technologies
-          </h2>
-          <div class="cards three" data-reveal>
+          <h2 data-reveal>Nos Services</h2>
+          <div class="cards four" data-reveal>
             <article class="card card-rich">
-              <h3>Integrating Sustainability.</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis.
-              </p>
-              <ul class="bullets">
-                <li>Clean operations</li>
-                <li>Reduced emissions</li>
-                <li>Community impact</li>
-              </ul>
-              <a href="#contact" class="btn-outline">Read More</a>
+              <div class="svc-badge">01</div>
+              <img
+                class="svc-img"
+                src="images/Services/Renovation.jpg"
+                alt="Rénovations"
+              />
+              <h3>Rénovations</h3>
+              <p>Réhabilitation intérieure et extérieure, qualité durable.</p>
             </article>
             <article class="card card-rich">
-              <h3>CCUS Technology.</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis.
-              </p>
-              <ul class="bullets">
-                <li>Capture</li>
-                <li>Utilization</li>
-                <li>Storage</li>
-              </ul>
-              <a href="#contact" class="btn-outline">Read More</a>
+              <div class="svc-badge">02</div>
+              <img
+                class="svc-img"
+                src="images/Services/Amenagement.jpg"
+                alt="Aménagement"
+              />
+              <h3>Aménagement</h3>
+              <p>Optimisation des espaces, finitions et cloisonnements.</p>
             </article>
             <article class="card card-rich">
-              <h3>Careers at Boile.</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis.
-              </p>
-              <ul class="bullets">
-                <li>Open positions</li>
-                <li>Great culture</li>
-                <li>Benefits</li>
-              </ul>
-              <a href="#contact" class="btn-outline">Read More</a>
+              <div class="svc-badge">03</div>
+              <img
+                class="svc-img"
+                src="images/bg_site.jpg"
+                alt="Construction"
+              />
+              <h3>Construction</h3>
+              <p>Gros œuvre, second œuvre, pilotage de chantier.</p>
+            </article>
+            <article class="card card-rich">
+              <div class="svc-badge">04</div>
+              <img
+                class="svc-img"
+                src="images/Services/Decoration.jpg"
+                alt="Décorations"
+              />
+              <h3>Décorations</h3>
+              <p>Design d’intérieur, revêtements, menuiseries sur-mesure.</p>
+            </article>
+            <article class="card card-rich">
+              <div class="svc-badge">05</div>
+              <img
+                class="svc-img"
+                src="images/Services/Etancheite.jpg"
+                alt="Étanchéité"
+              />
+              <h3>Étanchéité</h3>
+              <p>Toitures, terrasses et façades protégées durablement.</p>
+            </article>
+            <article class="card card-rich">
+              <div class="svc-badge">06</div>
+              <img
+                class="svc-img"
+                src="images/Services/Electicite.jpg"
+                alt="Électricité"
+              />
+              <h3>Électricité</h3>
+              <p>Installations conformes, rénovations et mises aux normes.</p>
+            </article>
+            <article class="card card-rich">
+              <div class="svc-badge">07</div>
+              <img
+                class="svc-img"
+                src="images/Services/Plomberie.jpg"
+                alt="Plomberie"
+              />
+              <h3>Plomberie</h3>
+              <p>Réseaux, sanitaires, solutions économes en eau.</p>
+            </article>
+            <article class="card card-rich">
+              <div class="svc-badge">08</div>
+              <img
+                class="svc-img"
+                src="images/Services/Peinture.jpg"
+                alt="Peinture"
+              />
+              <h3>Peinture</h3>
+              <p>Finitions soignées, intérieurs et extérieurs.</p>
             </article>
           </div>
         </div>
       </section>
 
       <section
-        id="stats"
-        class="section stats fullscreen"
-        aria-label="Chiffres clés"
+        id="realisations"
+        class="section realisations fullscreen"
+        aria-label="Réalisations"
       >
         <div class="container">
-          <div class="kpis" data-reveal>
-            <div class="kpi">
-              <span class="num" data-count="98">0</span>%
-              <span class="label">Satisfaction</span>
-            </div>
-            <div class="kpi">
-              <span class="num" data-count="24">0</span>/<span class="suffix"
-                >7</span
-              >
-              <span class="label">Support</span>
-            </div>
-            <div class="kpi">
-              <span class="num" data-count="12">0</span>
-              <span class="label">Stratégies actives</span>
-            </div>
-            <div class="kpi">
-              <span class="num" data-count="30">0</span>
-              <span class="label">Partenaires</span>
-            </div>
+          <h2 data-reveal>Réalisations</h2>
+          <div class="filters" data-reveal>
+            <button class="filter-btn is-active" data-filter="all">Tout</button>
+            <button class="filter-btn" data-filter="construction">
+              Construction
+            </button>
+            <button class="filter-btn" data-filter="decorations">
+              Décorations
+            </button>
           </div>
-        </div>
-      </section>
-
-      <section class="section brands" aria-label="Partenaires">
-        <div class="container">
-          <div class="brand-logos" data-reveal>
-            <span>CAPITAL</span>
-            <span>FINANCE</span>
-            <span>INVEST</span>
-            <span>ACCREON</span>
-            <span>ALPHA</span>
+          <div class="works" data-reveal>
+            <figure class="work" data-category="construction">
+              <img src="images/Cons/Cons1.jpg" alt="Construction 1" />
+              <figcaption>Construction 1</figcaption>
+            </figure>
+            <figure class="work" data-category="construction">
+              <img src="images/Cons/Cons2.jpg" alt="Construction 2" />
+              <figcaption>Construction 2</figcaption>
+            </figure>
+            <figure class="work" data-category="decorations">
+              <img src="images/Deco/Deco1.jpg" alt="Décoration 1" />
+              <figcaption>Décoration 1</figcaption>
+            </figure>
+            <figure class="work" data-category="decorations">
+              <img src="images/Deco/Deco2.jpg" alt="Décoration 2" />
+              <figcaption>Décoration 2</figcaption>
+            </figure>
+            <!-- Deuxieme ligne -->
+            <figure class="work" data-category="construction">
+              <img src="images/Cons/Cons3.jpg" alt="Construction 3" />
+              <figcaption>Construction 3</figcaption>
+            </figure>
+            <figure class="work" data-category="construction">
+              <img src="images/Cons/Cons5.jpg" alt="Construction 4" />
+              <figcaption>Construction 4</figcaption>
+            </figure>
+            <figure class="work" data-category="decorations">
+              <img src="images/Deco/Deco3.jpg" alt="Décoration 3" />
+              <figcaption>Décoration 3</figcaption>
+            </figure>
+            <figure class="work" data-category="decorations">
+              <img src="images/Deco/Deco4.jpg" alt="Décoration 4" />
+              <figcaption>Décoration 4</figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -265,63 +332,43 @@
         aria-label="Témoignages"
       >
         <div class="container">
-          <h2 data-reveal>Serving Impressive List of Long Term Clients</h2>
-          <div class="testi-cards" data-reveal>
+          <h2 data-reveal class="section-title">Témoignages<h2>
+          <div class="testi-grid" data-reveal>
             <article class="testi-card">
               <img class="testi-photo" src="images/pexels.jpg" alt="Client" />
-              <p class="quote">
-                « Une méthodologie claire et des résultats réguliers. »
-              </p>
+              <p class="quote">« Une équipe fiable et très réactive. »</p>
               <div class="author">
                 <div class="avatar">AM</div>
                 <div class="meta">
-                  <strong>A. Martin</strong>
-                  <span>Directeur financier</span>
+                  <strong>A. Martin</strong><span>Directeur financier</span>
                 </div>
               </div>
             </article>
             <article class="testi-card">
               <img class="testi-photo" src="images/pexels.jpg" alt="Client" />
               <p class="quote">
-                « Un accompagnement précis et transparent, très professionnel. »
+                « Chantier livré à temps, finitions impeccables. »
               </p>
               <div class="author">
                 <div class="avatar">LD</div>
                 <div class="meta">
-                  <strong>L. Dupont</strong>
-                  <span>Investisseur privé</span>
+                  <strong>L. Dupont</strong><span>Entrepreneur</span>
                 </div>
               </div>
             </article>
             <article class="testi-card">
               <img class="testi-photo" src="images/pexels.jpg" alt="Client" />
               <p class="quote">
-                « Des tableaux de bord utiles et un vrai pilotage du risque. »
+                « De bons conseils et une vraie transparence. »
               </p>
               <div class="author">
                 <div class="avatar">SB</div>
                 <div class="meta">
-                  <strong>S. Bernard</strong>
-                  <span>Family office</span>
+                  <strong>S. Bernard</strong><span>Propriétaire</span>
                 </div>
               </div>
             </article>
-          </div>
-        </div>
-      </section>
 
-      <section class="section cta-band" aria-label="Appel à l'action">
-        <div class="container grid two" data-reveal>
-          <div>
-            <h2>Prêt à passer à l'étape suivante ?</h2>
-            <p>
-              Explorons ensemble comment améliorer vos performances tout en
-              maîtrisant le risque.
-            </p>
-          </div>
-          <div class="cta-actions">
-            <a href="#contact" class="btn-primary">Demander un devis</a>
-            <a href="#services" class="btn-outline">Voir nos offres</a>
           </div>
         </div>
       </section>
@@ -332,143 +379,225 @@
         aria-label="Questions fréquentes"
       >
         <div class="container">
-          <h2 data-reveal>FAQ</h2>
-          <details class="faq-item" data-reveal>
-            <summary>Comment démarrez-vous une collaboration ?</summary>
-            <p>
-              Un diagnostic de vos besoins suivi d'une proposition structurée.
-            </p>
-          </details>
-          <details class="faq-item" data-reveal>
-            <summary>Quelles sont vos métriques de risque ?</summary>
-            <p>Volatilité, drawdown, VaR, corrélations et stress tests.</p>
-          </details>
-          <details class="faq-item" data-reveal>
-            <summary>Proposez-vous des formations ?</summary>
-            <p>Oui, des modules adaptés aux niveaux et objectifs.</p>
-          </details>
-        </div>
-      </section>
-
-      <section
-        id="news"
-        class="section news fullscreen"
-        aria-label="Actualités"
-      >
-        <div class="container">
-          <h2 data-reveal>Actualités et perspectives</h2>
-          <div class="posts" data-reveal>
-            <article class="post">
-              <div class="badge">Analyse</div>
-              <h3>Rotation sectorielle et momentum</h3>
-              <p>
-                Comment capter les tendances tout en limitant les faux signaux.
-              </p>
-              <a href="#contact" class="btn-outline">En savoir plus</a>
-            </article>
-            <article class="post">
-              <div class="badge">Recherche</div>
-              <h3>Corrélation et diversification</h3>
-              <p>
-                Construire des portefeuilles résilients face aux chocs de
-                marché.
-              </p>
-              <a href="#contact" class="btn-outline">Lire l'étude</a>
-            </article>
-            <article class="post">
-              <div class="badge">Produit</div>
-              <h3>Nouvelle stratégie multi-actifs</h3>
-              <p>Un cadre systématique mêlant qualité, tendance et carry.</p>
-              <a href="#contact" class="btn-outline">Découvrir</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="why" class="section why" aria-label="Why Choose Us">
-        <div class="container grid two">
-          <div class="values-col" data-reveal>
-            <div class="values-grid">
-              <article class="value-card">
-                <span class="value-badge">01</span>
-                <h4>Collaborative.</h4>
-                <p>
-                  Nous co-construisons vos projets avec des équipes alignées
-                  terrain.
-                </p>
-              </article>
-              <article class="value-card">
-                <span class="value-badge">02</span>
-                <h4>Efficient.</h4>
-                <p>
-                  Optimisation des coûts, délais maîtrisés, qualité mesurée.
-                </p>
-              </article>
-              <article class="value-card">
-                <span class="value-badge">03</span>
-                <h4>Progressive.</h4>
-                <p>Procédés modernes et solutions durables pour le BTP.</p>
-              </article>
-              <article class="value-card">
-                <span class="value-badge">04</span>
-                <h4>Respectful.</h4>
-                <p>Sécurité, environnement et voisinage au cœur du chantier.</p>
-              </article>
-            </div>
-          </div>
-          <div class="why-col" data-reveal>
-            <p class="eyebrow">Why Choose Us</p>
-            <h2>Our Core Values for Industry Leadership.</h2>
-            <p>
-              De l’étude à la livraison, nous pilotons vos travaux avec rigueur
-              et transparence. Une équipe d’experts, des matériaux certifiés et
-              un suivi de qualité pour un résultat durable.
-            </p>
-            <div class="why-meta">
-              <div class="experience-circle">
-                <span>15+</span>
-                <small>Years Experience</small>
+          <h2 data-reveal class="section-title">FAQ</h2>
+          <div class="accordion" id="faqAccordion" data-reveal>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q1">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a1"
+                  aria-expanded="false"
+                  aria-controls="a1"
+                >
+                  Comment contacter le service client ?
+                </button>
+              </h2>
+              <div
+                id="a1"
+                class="accordion-collapse collapse"
+                aria-labelledby="q1"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Par téléphone au +225 00 00 00 00, via WhatsApp ou le
+                  formulaire.
+                </div>
               </div>
-              <img
-                class="why-image"
-                src="images/pexels.jpg"
-                alt="Chantier BTP"
-              />
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q2">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a2"
+                  aria-expanded="false"
+                  aria-controls="a2"
+                >
+                  Intervenez-vous sur des projets de rénovation ?
+                </button>
+              </h2>
+              <div
+                id="a2"
+                class="accordion-collapse collapse"
+                aria-labelledby="q2"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Oui, de l’étude aux finitions, avec suivi qualité et délais.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q3">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a3"
+                  aria-expanded="false"
+                  aria-controls="a3"
+                >
+                  Quels délais moyens pour un chantier ?
+                </button>
+              </h2>
+              <div
+                id="a3"
+                class="accordion-collapse collapse"
+                aria-labelledby="q3"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Les délais varient selon l’ampleur; un planning détaillé est
+                  partagé dès l’offre.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q4">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a4"
+                  aria-expanded="false"
+                  aria-controls="a4"
+                >
+                  Proposez-vous des devis gratuits ?
+                </button>
+              </h2>
+              <div
+                id="a4"
+                class="accordion-collapse collapse"
+                aria-labelledby="q4"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Oui, un devis détaillé et transparent est fourni gratuitement.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q5">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a5"
+                  aria-expanded="false"
+                  aria-controls="a5"
+                >
+                  Quelles zones d’intervention ?
+                </button>
+              </h2>
+              <div
+                id="a5"
+                class="accordion-collapse collapse"
+                aria-labelledby="q5"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Nous intervenons principalement à Abidjan et alentours. Autres
+                  zones sur demande.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="q6">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#a6"
+                  aria-expanded="false"
+                  aria-controls="a6"
+                >
+                  Offrez-vous des garanties ?
+                </button>
+              </h2>
+              <div
+                id="a6"
+                class="accordion-collapse collapse"
+                aria-labelledby="q6"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Oui, selon la nature des travaux, une garantie est précisée
+                  dans le devis.
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section
-        id="contact"
-        class="section contact fullscreen"
-        aria-label="Contact"
-      >
-        <div class="container grid two">
-          <div data-reveal>
-            <h2>Contactez-nous</h2>
-            <p>Parlez-nous de vos objectifs. Réponse sous 24h ouvrées.</p>
-            <ul class="contact-list">
-              <li><strong>Email:</strong> contact@baltinova.com</li>
-              <li><strong>Téléphone:</strong> +225 01 02 03 04</li>
-            </ul>
+      <section id="contact" class="contact-section" aria-label="Contacts">
+        <div class="contact-container">
+          <h2 class="contact-title">Contacts</h2>
+          <p class="contact-description">
+            Parlez-nous de votre projet. Réponse sous 24h ouvrées.
+          </p>
+          <div class="contact-content">
+            <div class="contact-info-column">
+              <div class="contact-info-item">
+                <div class="icon-circle">
+                  <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                </div>
+                <div class="info-details">
+                  <p class="info-label">Adresse</p>
+                  <p>Abidjan</p>
+                  <p>Côte d’Ivoire</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="icon-circle">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                </div>
+                <div class="info-details">
+                  <p class="info-label">Email</p>
+                  <p>contact@baltinova.com</p>
+                </div>
+              </div>
+              <div class="contact-info-item">
+                <div class="icon-circle">
+                  <i class="fas fa-phone" aria-hidden="true"></i>
+                </div>
+                <div class="info-details">
+                  <p class="info-label">Téléphone</p>
+                  <p>+225 00 00 00 00</p>
+                </div>
+              </div>
+              <div class="contact-social">
+                <p class="info-label">Réseaux sociaux</p>
+                <p>Suivez-nous et contactez-nous en un clic.</p>
+                <div class="social-icons">
+                  <a href="#" aria-label="Facebook"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a href="#" aria-label="Instagram"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a href="#" aria-label="TikTok"
+                    ><i class="fab fa-tiktok"></i
+                  ></a>
+                  <a href="#" aria-label="WhatsApp"
+                    ><i class="fab fa-whatsapp"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-map-column">
+              <iframe
+                title="Carte Abidjan, Côte d’Ivoire"
+                src="https://www.google.com/maps?q=Abidjan%2C%20C%C3%B4te%20d%27Ivoire&output=embed"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
-          <form class="contact-form" data-reveal>
-            <label>
-              <span>Nom</span>
-              <input type="text" name="name" required />
-            </label>
-            <label>
-              <span>Email</span>
-              <input type="email" name="email" required />
-            </label>
-            <label>
-              <span>Message</span>
-              <textarea name="message" rows="4" required></textarea>
-            </label>
-            <button type="submit" class="btn-primary">Envoyer</button>
-            <p class="form-status" role="status" aria-live="polite"></p>
-          </form>
         </div>
       </section>
     </main>
@@ -481,6 +610,11 @@
       </div>
     </footer>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
