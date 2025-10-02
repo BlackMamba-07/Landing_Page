@@ -66,8 +66,8 @@
   // Parallax hero
   const hero = document.querySelector("[data-parallax]");
   const slides = document.querySelectorAll(".hero-slide");
-  const prevBtn = null;
-  const nextBtn = null;
+  const prevBtn = document.querySelector(".hero-control.prev");
+  const nextBtn = document.querySelector(".hero-control.next");
   let slideIndex = 0;
   let sliderTimer;
   const goTo = (i) => {
@@ -98,6 +98,16 @@
       },
       { passive: true }
     );
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        prev();
+      });
+      nextBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        next();
+      });
+    }
   }
   // Témoignages - slider 3 par écran
   const testiTrack = document.querySelector(".testi-track");
@@ -184,3 +194,22 @@
   // Contact form (demo-only)
   // Formulaire supprimé au profit de la carte (aucune action ici)
 })();
+
+// Initialisation du Swiper pour les témoignages
+const swiper = new Swiper(".testi-swiper", {
+  // Les options que vous aviez déjà
+  effect: "flip",
+  grabCursor: true,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  // Options supplémentaires recommandées pour des témoignages
+  loop: true, // Pour un défilement infini
+  autoplay: {
+    delay: 5000, // Défilement automatique toutes les 5 secondes
+  },
+});
