@@ -353,40 +353,68 @@ img {
 }
 
 /* Hero Swiper */
+/* S'assurer que le conteneur hero-slider est un contexte de positionnement */
 .hero-slider {
-  position: absolute;
-  inset: 0;
-}
-
-/* Chaque slide Swiper */
-.hero-slide {
   position: relative;
-  background: var(--bg) center/cover no-repeat;
+  height: 100%;
   width: 100%;
-  height: 100vh;
-  filter: saturate(1.05) contrast(1.04) brightness(0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
 }
 
-/* Overlay avec blur */
-.hero-slide::before {
-  content: "";
+.hero-slide::after {
+  content: ""; /* Obligatoire pour afficher un pseudo-élément */
+  position: absolute; /* Permet de le positionner par rapport au .hero-slide */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Couleur noire semi-transparente */
+  z-index: 1; /* S'assurer qu'il est entre l'image (z-index: 0) et le contenu (z-index: 2) */
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Positionner les boutons de navigation de manière absolue à l'intérieur du conteneur du carrousel */
+.swiper-button-next,
+.swiper-button-prev {
   position: absolute;
-  inset: 0;
-  background: rgba(10, 15, 26, 0.55);
-  backdrop-filter: blur(4px);
-  z-index: 1;
+  top: 50%; /* Centrer verticalement */
+  transform: translateY(-50%);
+  z-index: 10; /* S'assurer qu'ils sont au-dessus des autres contenus */
 }
 
-/* Contenu texte dans les slides */
+/* Ajuster la position des boutons Suivant et Précédent */
+.swiper-button-prev {
+  left: 10px; /* Ajuster l'espacement par rapport au bord gauche */
+}
+
+.swiper-button-next {
+  right: 10px; /* Ajuster l'espacement par rapport au bord droit */
+}
+
+/* Positionner la pagination en bas */
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px; /* Ajuster l'espacement par rapport au bord inférieur */
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10; /* S'assurer qu'il est au-dessus des autres contenus */
+}
+
+/* S'assurer que le contenu du slide a un espacement adéquat et qu'il est centré */
 .slide-content {
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  max-width: 800px;
+  height: 100%;
   padding: 20px;
 }
 
@@ -474,6 +502,109 @@ img {
 .hero .container {
   position: relative;
   z-index: 3; /* au-dessus du slider */
+}
+
+/* --- TEMOIGNAGES --- */
+.testimonials {
+  padding: 4rem 2rem;
+  background: #111;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(
+    --red
+  ); /* Assurez-vous que la variable --red est bien définie, par exemple : --red: #e74c3c; */
+}
+
+.testimonial-card {
+  background: #111; /* Fond de la carte en noir */
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #ddd;
+  position: relative; /* Nécessaire pour positionner l'icône de citation */
+  border: 2px solid #222; /* Bordure discrète */
+}
+
+.testimonial-header {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid var(--brand); /* Bordure en rouge */
+  overflow: hidden;
+  display: inline-block;
+}
+
+.testimonial-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quote-icon {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--brand); /* Icône de citation en rouge */
+  font-family: sans-serif;
+  opacity: 0.2;
+}
+
+.testimonial-card p {
+  font-style: normal;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.testimonial-card h4 {
+  color: #eee;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Styles pour les boutons de navigation pour qu'ils soient en dehors des cartes */
+.testimonial-swiper {
+  padding: 0 40px; /* Ajoute de l'espace pour les boutons */
+}
+
+.testimonial-swiper .swiper-button-next,
+.testimonial-swiper .swiper-button-prev {
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--red); /* Boutons en rouge */
+  font-size: 1.5rem;
+}
+
+.testimonial-swiper .swiper-button-prev {
+  left: 0;
+}
+
+.testimonial-swiper .swiper-button-next {
+  right: 0;
+}
+
+.testimonial-swiper .swiper-pagination {
+  position: static; /* Retire la pagination du flux normal */
+  margin-top: 2rem; /* Ajoute un espace en haut */
+}
+
+.testimonial-card h4 {
+  margin: 0;
+  color: var(--red);
 }
 
 /* Highlights below header */

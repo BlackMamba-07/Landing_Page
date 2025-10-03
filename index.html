@@ -27,10 +27,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
     <!-- Swiper CSS -->
-<link
-rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -84,72 +84,56 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     </header>
 
     <main id="main" class="main">
-      <section
-  id="hero"
-  class="section hero fullscreen"
-  aria-label="Héros"
-  data-parallax
->
-  <div class="hero-slider swiper">
-    <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div
-        class="swiper-slide hero-slide"
-        style="--bg: url('images/Cons/Cons4.jpg')"
-      >
-        <div class="overlay"></div>
-        <div class="slide-content">
-          <h1>Construire l'avenir</h1>
-          <p>Votre partenaire pour des projets solides et durables.</p>
-          <div class="hero-cta">
-            <a href="#services" class="btn-primary">Nos Services</a>
-            <a href="#contact" class="btn-outline">Contacts</a>
+      <section class="hero fullscreen">
+        <div class="swiper hero-slider">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div
+              class="swiper-slide hero-slide"
+              style="background-image: url('images/Services/Decoration.jpg')"
+            >
+              <div class="slide-content">
+                <h1>Bienvenue chez Baltinova Trading</h1>
+                <p>Nous vous accompagnons avec passion et expertise.</p>
+                <div class="hero-cta">
+                  <a href="#services" class="btn-primary">Nos Services</a>
+                  <a href="#contact" class="btn-outline">Contactez-nous</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div
+              class="swiper-slide hero-slide"
+              style="background-image: url('images/Cons/Cons4.jpg')"
+            >
+              <div class="slide-content">
+                <h1>Stratégie & Innovation</h1>
+                <p>Une vision moderne adaptée à vos besoins.</p>
+                <div class="hero-cta">
+                  <a href="#about" class="btn-primary">Découvrir</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div
+              class="swiper-slide hero-slide"
+              style="background-image: url('images/Deco/Deco3.jpg')"
+            >
+              <div class="slide-content">
+                <h1>Expertise Globale</h1>
+                <p>Des solutions performantes et durables.</p>
+              </div>
+            </div>
           </div>
+
+          <!-- Pagination et navigation -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div
-        class="swiper-slide hero-slide"
-        style="--bg: url('images/Cons/Cons3.jpg')"
-      >
-        <div class="overlay"></div>
-        <div class="slide-content">
-          <h1>Rénover avec style</h1>
-          <p>Des solutions adaptées à vos besoins et votre budget.</p>
-          <div class="hero-cta">
-            <a href="#services" class="btn-primary">Nos Services</a>
-            <a href="#contact" class="btn-outline">Contacts</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div
-        class="swiper-slide hero-slide"
-        style="--bg: url('images/Deco/Deco1.jpg')"
-      >
-        <div class="overlay"></div>
-        <div class="slide-content">
-          <h1>Créer avec passion</h1>
-          <p>Un design moderne et une finition impeccable.</p>
-          <div class="hero-cta">
-            <a href="#services" class="btn-primary">Nos Services</a>
-            <a href="#contact" class="btn-outline">Contacts</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Pagination -->
-    <div class="swiper-pagination"></div>
-
-    <!-- Navigation -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
-  </div>
-</section>
-
+      </section>
 
       <section id="banner" class="section banner" aria-label="Bannière">
         <div class="container">
@@ -191,7 +175,9 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
           </figure>
           <div class="about-copy" data-reveal>
             <h2 class="section-title">À propos</h2>
-            <h3 style="color: #fff;">Baltinova Trading, votre partenaire BTP.</h3>
+            <h3 style="color: #fff">
+              Baltinova Trading, votre partenaire BTP.
+            </h3>
             <p class="tagline">
               Transparence, diligence et créativité au service de vos projets.
             </p>
@@ -363,50 +349,84 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         </div>
       </section>
 
-      <section
-        id="testimonials"
-        class="section testimonials fullscreen"
-        aria-label="Témoignages"
-      >
-        <div class="container">
-          <h2 data-reveal class="section-title">Témoignages<h2>
-          <div class="testi-grid" data-reveal>
-            <article class="testi-card">
-              <img class="testi-photo" src="images/pexels.jpg" alt="Client" />
-              <p class="quote">« Une équipe fiable et très réactive. »</p>
-              <div class="author">
-                <div class="avatar">AM</div>
-                <div class="meta">
-                  <strong>A. Martin</strong><span>Directeur financier</span>
+      <section class="testimonials">
+        <h2>Témoignages</h2>
+        <div class="swiper testimonial-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="testimonial-photo">
+                    <img src="images/Perso/H1.jpg" alt="Photo de Jean Dupont" />
+                  </div>
                 </div>
+                <span class="quote-icon">"</span>
+                <p>
+                  "Baltinova m’a permis de transformer mon business avec des
+                  solutions adaptées."
+                </p>
+                <h4>- Jean Dupont</h4>
               </div>
-            </article>
-            <article class="testi-card">
-              <img class="testi-photo" src="images/pexels.jpg" alt="Client" />
-              <p class="quote">
-                « Chantier livré à temps, finitions impeccables. »
-              </p>
-              <div class="author">
-                <div class="avatar">LD</div>
-                <div class="meta">
-                  <strong>L. Dupont</strong><span>Entrepreneur</span>
-                </div>
-              </div>
-            </article>
-            <article class="testi-card">
-              <img class="testi-photo" src="images/pexels.jpg" alt="Client" />
-              <p class="quote">
-                « De bons conseils et une vraie transparence. »
-              </p>
-              <div class="author">
-                <div class="avatar">SB</div>
-                <div class="meta">
-                  <strong>S. Bernard</strong><span>Propriétaire</span>
-                </div>
-              </div>
-            </article>
+            </div>
 
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="testimonial-photo">
+                    <img
+                      src="images/Perso/F1.jpg"
+                      alt="Photo de Marie Claire"
+                    />
+                  </div>
+                </div>
+                <span class="quote-icon">"</span>
+                <p>
+                  "Une équipe professionnelle, réactive et très à l’écoute de
+                  mes besoins."
+                </p>
+                <h4>- Marie Claire</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="testimonial-photo">
+                    <img src="images/Perso/H2.jpg" alt="Photo d'Ali Koné" />
+                  </div>
+                </div>
+                <span class="quote-icon">"</span>
+                <p>
+                  "Grâce à leur expertise, j’ai pu atteindre mes objectifs
+                  rapidement."
+                </p>
+                <h4>- Ali Koné</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-header">
+                  <div class="testimonial-photo">
+                    <img
+                      src="images/Perso/F2.jpg"
+                      alt="Photo de Sophie Lemaire"
+                    />
+                  </div>
+                </div>
+                <span class="quote-icon">"</span>
+                <p>
+                  "Un vrai partenaire stratégique, je recommande fortement
+                  Baltinova."
+                </p>
+                <h4>- Sophie Lemaire</h4>
+              </div>
+            </div>
           </div>
+
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
       </section>
 
@@ -646,8 +666,48 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         </p>
       </div>
     </footer>
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const heroSwiper = new Swiper(".hero-slider", {
+        loop: true,
+        effect: "fade",
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      // TESTIMONIALS Swiper
+      const testimonialSwiper = new Swiper(".testimonial-swiper", {
+        loop: true,
+        spaceBetween: 30, // Espace entre les slides
+        slidesPerView: 1, // Une seule carte par vue sur toutes les tailles d'écran
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".testimonial-swiper .swiper-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '"></span>';
+          },
+        },
+        navigation: {
+          nextEl: ".testimonial-swiper .swiper-button-next",
+          prevEl: ".testimonial-swiper .swiper-button-prev",
+        },
+      });
+    </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

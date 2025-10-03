@@ -26,7 +26,10 @@
         else header.classList.remove("is-stuck");
       });
     },
-    { rootMargin: "-80px 0px 0px 0px", threshold: 0 }
+    {
+      rootMargin: "-80px 0px 0px 0px",
+      threshold: 0,
+    }
   );
   headerObserver.observe(document.body);
 
@@ -44,7 +47,9 @@
         }
       });
     },
-    { threshold: 0.6 }
+    {
+      threshold: 0.6,
+    }
   );
   sections.forEach((s) => sectionObserver.observe(s));
 
@@ -59,92 +64,13 @@
         }
       });
     },
-    { threshold: 0.2 }
+    {
+      threshold: 0.2,
+    }
   );
   revealEls.forEach((el) => revealObserver.observe(el));
 
-  // Parallax hero
-  const hero = document.querySelector("[data-parallax]");
-  const slides = document.querySelectorAll(".hero-slide");
-  const prevBtn = document.querySelector(".hero-control.prev");
-  const nextBtn = document.querySelector(".hero-control.next");
-  let slideIndex = 0;
-  let sliderTimer;
-  const goTo = (i) => {
-    slides.forEach((s, idx) => s.classList.toggle("is-active", idx === i));
-    slideIndex = i;
-  };
-  const next = () => goTo((slideIndex + 1) % Math.max(slides.length, 1));
-  const prev = () =>
-    goTo((slideIndex - 1 + slides.length) % Math.max(slides.length, 1));
-  if (hero && slides.length) {
-    goTo(0);
-    sliderTimer = setInterval(next, 4000);
-    function resetTimer() {
-      clearInterval(sliderTimer);
-      sliderTimer = setInterval(next, 4000);
-    }
-    window.addEventListener(
-      "scroll",
-      () => {
-        const rect = hero.getBoundingClientRect();
-        const progress = Math.min(
-          Math.max((0 - rect.top) / Math.max(1, rect.height), 0),
-          1
-        );
-        const active = document.querySelector(".hero-slide.is-active");
-        if (active)
-          active.style.transform = `translateY(${progress * 40}px) scale(1.02)`;
-      },
-      { passive: true }
-    );
-    if (prevBtn && nextBtn) {
-      prevBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        prev();
-      });
-      nextBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        next();
-      });
-    }
-  }
-  // Témoignages - slider 3 par écran
-  const testiTrack = document.querySelector(".testi-track");
-  const testiPrev = null;
-  const testiNext = null;
-  const testiCards = document.querySelectorAll(".testi-card");
-  if (testiTrack && testiCards.length) {
-    let tIndex = 0;
-    const perView = () =>
-      window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
-    const maxIndex = () =>
-      Math.max(0, Math.ceil(testiCards.length / perView()) - 1);
-    const sync = () => {
-      const pct = -(tIndex * 100);
-      testiTrack.style.transform = `translateX(${pct}%)`;
-    };
-    const go = (i) => {
-      tIndex = Math.max(0, Math.min(maxIndex(), i));
-      sync();
-    };
-    const nextT = () => go(tIndex + 1);
-    const prevT = () => go(tIndex - 1);
-    let testiTimer = setInterval(nextT, 4000);
-    const viewport = document.querySelector(".testi-viewport");
-    if (viewport) {
-      viewport.addEventListener("mouseenter", () => {
-        clearInterval(testiTimer);
-      });
-      viewport.addEventListener("mouseleave", () => {
-        testiTimer = setInterval(nextT, 4000);
-      });
-    }
-    window.addEventListener("resize", () => go(tIndex));
-    sync();
-  }
-
-  // KPI counters
+  // KPI counters (This section is also missing in your HTML code, it won't run but doesn't cause an error)
   const nums = document.querySelectorAll(".kpi .num");
   const animateNum = (el) => {
     const target = parseInt(el.getAttribute("data-count") || "0", 10);
@@ -167,7 +93,9 @@
         }
       });
     },
-    { threshold: 0.4 }
+    {
+      threshold: 0.4,
+    }
   );
   document.querySelectorAll(".kpis").forEach((k) => kpiObserver.observe(k));
 
@@ -190,25 +118,4 @@
     );
     applyFilter("all");
   }
-
-  // Contact form (demo-only)
-  // Formulaire supprimé au profit de la carte (aucune action ici)
 })();
-
-/// HERO - Swiper
-const heroSwiper = new Swiper(".hero-swiper", {
-  loop: true,
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-  effect: "fade", // ou "slide"
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
